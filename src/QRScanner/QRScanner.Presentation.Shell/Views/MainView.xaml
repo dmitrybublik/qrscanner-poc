@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QRScanner.Presentation.Shell.Views.MainView">
+    
+    <Grid BackgroundColor="Green" VerticalOptions="Center" Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Switch Grid.Column="0"
+                    IsToggled="{Binding Path=AutoScanEnabled, Mode=TwoWay}" />
+            
+            <Label Grid.Column="1"
+                   Margin="12"
+                   Text="Auto Scan" />
+        </Grid>
+        
+        <Button Grid.Row="2"
+                Text="Scan" 
+                Margin="5"
+                Command="{Binding Path=ScanCommand, Mode=OneWay}" />
+        
+    </Grid>
+</ContentView>

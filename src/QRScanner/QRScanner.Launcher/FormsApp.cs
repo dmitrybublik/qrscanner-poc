@@ -17,8 +17,8 @@ namespace QRScanner.Launcher
 
             //TODO: Move all registrations to modules
             _dependencyRegistrator.RegisterTransient<ShellViewModel>();
-            //_dependencyRegistrator.RegisterTransient<MainViewModel>();
-            //_dependencyRegistrator.RegisterSingleton<IDataService, DataService>();
+            _dependencyRegistrator.RegisterTransient<MainViewModel>();
+
             DisplayRootViewFor<ShellViewModel>();
         }             
 

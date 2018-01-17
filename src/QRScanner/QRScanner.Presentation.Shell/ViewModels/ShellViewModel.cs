@@ -2,11 +2,16 @@
 
 namespace QRScanner.Presentation.Shell.ViewModels
 {
-    public class ShellViewModel : Screen
+    public class ShellViewModel : Conductor<Screen>.Collection.OneActive
     {
-        public ShellViewModel()
+        protected override void OnInitialize()
         {
+            base.OnInitialize();
 
+            //TODO: Use View Model Factory
+            var mainViewModel = new MainViewModel();
+            Items.Add(mainViewModel);
+            ActivateItem(mainViewModel);
         }
     }
 }
