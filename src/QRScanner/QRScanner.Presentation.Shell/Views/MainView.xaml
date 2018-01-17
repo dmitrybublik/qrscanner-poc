@@ -1,29 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cal="clr-namespace:Caliburn.Micro.Xamarin.Forms;assembly=Caliburn.Micro.Xamarin.Forms"
              x:Class="QRScanner.Presentation.Shell.Views.MainView">
     
-    <Grid BackgroundColor="Green" VerticalOptions="Center" Margin="24">
+    <Grid VerticalOptions="FillAndExpand" Margin="24">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Switch Grid.Column="0"
-                    IsToggled="{Binding Path=AutoScanEnabled, Mode=TwoWay}" />
-            
             <Label Grid.Column="1"
                    Margin="12"
                    Text="Auto Scan" />
+
+            <Switch Grid.Column="2"
+                    IsToggled="{Binding Path=AutoScanEnabled, Mode=TwoWay}" />            
         </Grid>
         
+        <ContentView Grid.Row="1"
+                     Margin="16"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     cal:View.Model="{Binding Path=ActiveItem, Mode=OneWay}" />
+
         <Button Grid.Row="2"
                 Text="Scan" 
                 Margin="5"

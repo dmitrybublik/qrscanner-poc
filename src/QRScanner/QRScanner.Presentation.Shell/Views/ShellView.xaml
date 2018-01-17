@@ -5,7 +5,7 @@
              x:Class="QRScanner.Presentation.Shell.Views.ShellView"
               >
     <ContentPage.Content>
-        <Grid BackgroundColor="Red">
+        <Grid>
             <ContentView cal:View.Model="{Binding ActiveItem}" 
                          VerticalOptions="Fill" 
                          HorizontalOptions="FillAndExpand"

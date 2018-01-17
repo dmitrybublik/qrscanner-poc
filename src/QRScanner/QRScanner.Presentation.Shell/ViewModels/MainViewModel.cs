@@ -4,7 +4,7 @@ using LogoFX.Client.Mvvm.Commanding;
 
 namespace QRScanner.Presentation.Shell.ViewModels
 {
-    public class MainViewModel : Screen
+    public class MainViewModel : Conductor<ScanViewModel>
     {
         public MainViewModel()
         {
@@ -39,6 +39,13 @@ namespace QRScanner.Presentation.Shell.ViewModels
                 _autoScanEnabled = value;
                 NotifyOfPropertyChange();
             }
+        }
+
+        protected override void OnInitialize()
+        {
+            base.OnInitialize();
+
+            ActivateItem(new ScanViewModel());
         }
     }
 }
