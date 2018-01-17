@@ -4,6 +4,9 @@ namespace QRScanner.Presentation.Shell.ViewModels
 {
     public class ShellViewModel : Screen
     {
-        
+        public ShellViewModel()
+        {
+
+        }
     }
 }

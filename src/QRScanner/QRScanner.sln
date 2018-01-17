@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3D39D1FA-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{BD73501C-0EEC-4B02-86DA-0E8EC5BF2C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRScanner.Presentation.Shell", "QRScanner.Presentation.Shell\QRScanner.Presentation.Shell.csproj", "{922F777A-99F0-46B1-B43D-6D559B43652B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRScanner.Presentation.Shell", "QRScanner.Presentation.Shell\QRScanner.Presentation.Shell.csproj", "{922F777A-99F0-46B1-B43D-6D559B43652B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRScanner.Android", "QRScanner.Android\QRScanner.Android.csproj", "{6CDDF586-B80A-4595-95D1-22119B064BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRScanner.iOS", "QRScanner.iOS\QRScanner.iOS.csproj", "{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,28 @@ Global
 		{6CDDF586-B80A-4595-95D1-22119B064BEF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{6CDDF586-B80A-4595-95D1-22119B064BEF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{6CDDF586-B80A-4595-95D1-22119B064BEF}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|Any CPU.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|Any CPU.Build.0 = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|iPhone.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|iPhone.Build.0 = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|Any CPU.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|Any CPU.Build.0 = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|iPhone.Build.0 = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Debug|iPhone.Build.0 = Debug|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Release|iPhone.ActiveCfg = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Release|iPhone.Build.0 = Release|iPhone
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{AEDD7C02-5AB4-4555-AF8F-A98582DFCE20}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
