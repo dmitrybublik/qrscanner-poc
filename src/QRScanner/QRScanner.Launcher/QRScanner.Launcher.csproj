@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogoFX.Client.Mvvm.ViewModel.Core" Version="1.1.1-rc2" />
+    <PackageReference Include="Solid.Practices.IoC" Version="1.2.1-rc2" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QRScanner.Presentation.Shell\QRScanner.Presentation.Shell.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro.Xamarin.Forms">
+      <HintPath>..\..\Externals\Caliburn.Micro\Caliburn.Micro.Xamarin.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
