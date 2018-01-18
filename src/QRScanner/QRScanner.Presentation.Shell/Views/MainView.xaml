@@ -5,37 +5,8 @@
              x:Class="QRScanner.Presentation.Shell.Views.MainView">
     
     <Grid VerticalOptions="FillAndExpand" Margin="24">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-
-            <Label Grid.Column="1"
-                   Margin="12"
-                   Text="Auto Scan" />
-
-            <Switch Grid.Column="2"
-                    IsToggled="{Binding Path=AutoScanEnabled, Mode=TwoWay}" />            
-        </Grid>
-        
-        <ContentView Grid.Row="1"
-                     Margin="16"
-                     VerticalOptions="FillAndExpand"
+        <ContentView VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand"
                      cal:View.Model="{Binding Path=ActiveItem, Mode=OneWay}" />
-
-        <Button Grid.Row="2"
-                Text="Scan" 
-                Margin="5"
-                Command="{Binding Path=ScanCommand, Mode=OneWay}" />
-        
     </Grid>
 </ContentView>

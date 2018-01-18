@@ -1,51 +1,32 @@
-﻿using System.Windows.Input;
-using Caliburn.Micro;
-using LogoFX.Client.Mvvm.Commanding;
+﻿using Caliburn.Micro;
+using ZXing;
 
 namespace QRScanner.Presentation.Shell.ViewModels
 {
-    public class MainViewModel : Conductor<ScanViewModel>
+    public class MainViewModel : Conductor<object>
     {
+        private ScanViewModel _scanViewModel;
+
         public MainViewModel()
         {
-        }
-
-        private ICommand _scanCommand;
-
-        public ICommand ScanCommand
-        {
-            get
-            {
-                return _scanCommand ??
-                       (_scanCommand = ActionCommand
-                           .When(() => !AutoScanEnabled)
-                           .Do(() => { })
-                           .RequeryOnPropertyChanged(this, () => AutoScanEnabled));
-            }
-        }
-
-        private bool _autoScanEnabled;
-
-        public bool AutoScanEnabled
-        {
-            get { return _autoScanEnabled; }
-            set
-            {
-                if (value == _autoScanEnabled)
-                {
-                    return;
-                }
-
-                _autoScanEnabled = value;
-                NotifyOfPropertyChange();
-            }
         }
 
         protected override void OnInitialize()
         {
             base.OnInitialize();
 
-            ActivateItem(new ScanViewModel());
+            _scanViewModel = new ScanViewModel(OnScanResult);
+            OnRescan();
+        }
+
+        private void OnScanResult(Result result)
+        {
+            ActivateItem(new ResultViewModel(result, OnRescan));
+        }
+
+        private void OnRescan()
+        {
+            ActivateItem(_scanViewModel);
         }
     }
 }
